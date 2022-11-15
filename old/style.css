@@ -1,0 +1,45 @@
+@font-face {
+    font-family: "OsloSans";
+    src: url('assets/fonts/OsloSansOffice-Regular.ttf');
+}
+
+body .background {
+    font-family: "OsloSans";
+    background-image: url("assets/images/laptop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    position:fixed;
+    top: 0;
+}
+
+body {
+    font-family: "OsloSans";
+}
+
+.container {
+    right: 0;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.nav-item .active {
+    color: #ffffff;
+}
+
+.nav-item:hover {
+    color: #9fcfff;
+}
+
+.card-text {
+    padding-right: 2%;
+    padding-left: 2%;
+}
+.card-title {
+    padding-right: 2%;
+    padding-left: 2%;
+}
