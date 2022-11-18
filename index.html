@@ -18,16 +18,16 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#scams">
+                <li><a onclick="document.getElementById('container1').scrollIntoView();">
                         <span class="material-symbols-outlined">Home</span> Scams
                     </a></li>
-                <li><a href="#avoid">
+                <li><a onclick="document.getElementById('container2').scrollIntoView();">
                         <span class="material-symbols-outlined">Block</span> Avoid
                     </a></li>
-                <li><a href="#more">
+                <li><a onclick="document.getElementById('container3').scrollIntoView();">
                         <span class="material-symbols-outlined">Podcasts</span> Podcast
                     </a></li>
-                <li><a href="#sources">
+                <li><a onclick="document.getElementById('container4').scrollIntoView();">
                         <span class="material-symbols-outlined">Link</span> Sources
                     </a></li>
             </ul>
@@ -37,7 +37,8 @@
         <div class="title">
             <h1>Online scams</h1>
         </div>
-        <div class="container1">
+        <div class="container1" id="container1">
+            <h1 class="title1">Scams</h1>
             <div class="textbox1">
                 <p>Online scams have become a common phenomenon. The internet is full of fake
                     websites, social media posts and emails claiming that they are there to help you or they
@@ -55,10 +56,47 @@
                 </p>
             </div>
             <div class="imagebox1">
-                <img src="assets/images/lady.jpg" alt="Online scams">
+                <img src="assets/images/some-scams.png" alt="Online scams">
             </div>
         </div>
-    </div>
+        <div class="container2" id="container2">
+            <h1 class="title2">Avoid</h1>
+            <div class="textbox2">
+                <p>Online scams have become a common phenomenon. The internet is full of fake
+                    websites, social media posts and emails claiming that they are there to help you or they
+                    have something that you can receive. People need to be aware of the dangers of online fraud
+                    in order to protect themselves from being deceived. Anyone using the internet should take
+                    precautions so as not to fall victim to fraudulent activities. Scammers create websites and
+                    apps that look legitimate but are actually designed to steal visitors personal information.
+                    These pages look like normal web pages but contain hidden malicious code designed to infect
+                    users' devices with malware. This data is then sold to various criminal organizations who
+                    use it to send illegal scams directly to your home. People should avoid revealing their
+                    contact information or submitting sensitive business information to questionable websites.
+                    Additionally, users should never enter passwords or payment details when registering for any
+                    online service. Malicious websites and applications will never use this information to
+                    contact you directly. Instead, the data is sold to others who intend to defraud that person.
+                </p>
+            </div>
+            <div class="imagebox2">
+                <img src="assets/images/scam.jpg" alt="Online scams">
+            </div>
+        </div>
+        <div class="container3" id="container3">
+            <h1 class="title3">Podcast</h1>
+            <audio controls src="assets/audio/podcast.mp3" class="podcast3"></audio>
+        </div>
+        <div class="container4" id="container4">
+            <h1 class="title4">Sources</h1>
+            <div class="textbox4">
+                <a class="source"
+                    href="https://www.ftc.gov/sites/default/files/u251195/social-media-scams-data-spotlight-102020.png">Scam-Image</a>
+                <a class="source"
+                    href="https://xd.adobe.com/view/5da4880d-5fca-4e18-891f-d19b912549a5-08f7/?fullscreen">Adobe-XD
+                    sketch</a> </div>
+            <div class="imagebox4">
+                <img src="assets/images/google.jpg" alt="Online scams">
+            </div>
+        </div>
 </body>
 
 </html>
