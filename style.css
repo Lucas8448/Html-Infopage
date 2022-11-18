@@ -11,16 +11,19 @@ body {
     padding: 0;
     margin: 0;
     background-color: black;
+    scroll-behavior: smooth;
 }
 
 /* navbar */
 *{transition:all 0.3s ease-in-out;}
 
 .navbar{
+    z-index: 1;
     overflow: hidden;
     background-color: black;
     margin: 0;
     padding: 0;
+    text-decoration: none;
     width: 100%;
     left: 0;
     top: 0;
@@ -80,21 +83,10 @@ body {
     color: aqua;
 }
 
-.main {
-    width: 100%;
-    height: 85vh;
-    margin-top: 15vh;
-    background-image: url("assets/images/laptop.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
 .main .title {
     padding-top: 5vh;
     width: 100%;
-    height: 20%;
+    padding-bottom: 5vh;
     position: block;
     text-align: center;
     color: black;
@@ -105,43 +97,404 @@ body {
     vertical-align: center;
 }
 
-.container1 {
-    display: grid;
-    width: 100vw;
-    background-color: rgb(0, 0, 0);
-    position: absolute;
-    grid-template-columns: 60% 40%;
-    grid-template-rows: 100%;
-    grid-template-areas: "a b";
-    font-family: "OsloSans";
+@media (orientation: landscape) {
+    .main {
+        z-index: 0;
+        width: 100%;
+        height: 360vh;
+        margin-top: 15vh;
+        background-image: url("assets/images/laptop.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 
+    .container1 {
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        height: min-content;
+        position: absolute;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas: "title1 title1"
+                                                "a1 b1";
+        font-family: "OsloSans";
+        background-color: black;
+        overflow: hidden;
+        height: 60%;
+    }
+    .title1 {
+        grid-area: title1;
+        background-color: black;
+        padding-top: 1vh;
+        margin-bottom: 1vh;
+        color: white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .textbox1 {
+        grid-area: a1;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        width: 60vw;
+        padding-left: 2%;
+    }
+
+    .textbox1 p {
+        padding: 2%;
+        margin: 2%;
+        vertical-align: center;
+    }
+
+    .imagebox1 {
+        grid-area: b1;
+        width: 40vw;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    .imagebox1 img{
+        width: 40vw;
+    }
+
+    .container2 {
+        margin-top: 100vh;
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        height: min-content;
+        position: absolute;
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas: "title2 title2"
+                                                "b2 a2";
+        font-family: "OsloSans";
+        background-color: black;
+        overflow: hidden;
+        height: 60%;
+    }
+    .title2 {
+        grid-area: title2;
+        background-color: black;
+        padding-top: 1vh;
+        margin-bottom: 1vh;
+        color: white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .textbox2 {
+        grid-area: a2;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        width: 60vw;
+        padding-left: 2%;
+    }
+
+    .textbox2 p {
+        padding: 2%;
+        margin: 2%;
+        vertical-align: center;
+    }
+
+    .imagebox2 {
+        grid-area: b2;
+        width: 40vw;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    .imagebox2 img{
+        width: 40vw;
+    }
+
+    .container3 {
+        margin-top: 200vh;
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        height: min-content;
+        position: absolute;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas: "title3"
+                                                "pod";
+        font-family: "OsloSans";
+        background-color: black;
+        overflow: hidden;
+        height:60%;
+    }
+
+    .container4 {
+        margin-top: 300vh;
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        height: min-content;
+        position: absolute;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas: "title4 title4"
+                                                "b4 a4";
+        font-family: "OsloSans";
+        background-color: black;
+        overflow: hidden;
+        height: 60%;
+    }
+    .title4 {
+        grid-area: title4;
+        background-color: black;
+        padding-top: 1vh;
+        margin-bottom: 1vh;
+        color: white;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .textbox4 {
+        grid-area: a4;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        width: 60vw;
+        padding-left: 2%;
+    }
+
+    .textbox4 p {
+        padding: 2%;
+        margin: 2%;
+        vertical-align: center;
+    }
+
+    .imagebox4 {
+        grid-area: b4;
+        width: 40vw;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    .imagebox4 img{
+        width: 40vw;
+    }
 }
 
-.textbox1 {
-    grid-area: a;
-    background-color: rgb(0, 0, 0);
+@media (orientation: portrait){
+    .main {
+        z-index: 0;
+        width: 100%;
+        height: 450vh;
+        margin-top: 30vh;
+        background-image: url("assets/images/laptop.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    .container1 {
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        position: absolute;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 40% 40;
+        grid-template-areas: "title1"
+                                                "a1"
+                                                "b1";
+        font-family: "OsloSans";
+        background-color: black;
+        overflow: hidden;
+    }
+
+    .title1 {
+        grid-area: title1;
+        background-color: black;
+        padding-top: 1vh;
+        margin-bottom: 1vh;
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+
+    .textbox1 {
+        grid-area: a1;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        width: 100vw;
+        padding-left: 2%;
+    }
+
+    .textbox1 p {
+        padding: 2%;
+        margin: 2%;
+        vertical-align: center;
+    }
+
+    .imagebox1 {
+        grid-area: b1;
+        width: 100vw;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    .imagebox1 img{
+        width: 100vw;
+    }
+
+    .container2 {
+        margin-top: 150vh;
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        position: absolute;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 40% 40%;
+        grid-template-areas: "title2"
+                                                "a2"
+                                                "b2";
+        font-family: "OsloSans";
+        background-color: black;
+        overflow: hidden;
+    }
+
+    .title2 {
+    grid-area: title2;
+    background-color: black;
+    padding-top: 1vh;
+    margin-bottom: 1vh;
     color: white;
-    width: 60vw;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    }
+
+    .textbox2 {
+        grid-area: a2;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        width: 100vw;
+        padding-left: 2%;
+    }
+
+    .textbox2 p {
+        padding: 2%;
+        margin: 2%;
+        vertical-align: center;
+    }
+
+    .imagebox2 {
+        grid-area: b2;
+        width: 100vw;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    .imagebox2 img{
+        width: 100vw;
+    }
+
+    .container3 {
+        margin-top: 300vh;
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        height: min-content;
+        position: absolute;
+        grid-template-columns:40% 60%;
+        grid-template-rows: 20% 80%;
+        grid-template-areas: "title3"
+                                                "pod";
+        font-family: "OsloSans";
+        background-color: black;
+        overflow: hidden;
+        height: 30vh;
+    }
+
+    .container4 {
+        margin-top: 450vh;
+        z-index: 0;
+        display: grid;
+        width: 100vw;
+        position: absolute;
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 40% 40;
+        grid-template-areas: "title4"
+                                                "a4"
+                                                "b4";
+        font-family: "OsloSans";
+        background-color: black;
+        overflow: hidden;
+    }
+
+    .title4 {
+    grid-area: title4;
+    background-color: black;
+    padding-top: 1vh;
+    margin-bottom: 1vh;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    }
+
+    .textbox4 {
+        grid-area: a4;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        width: 100vw;
+        padding-left: 2%;
+    }
+
+    .textbox4 p {
+        padding: 2%;
+        margin: 2%;
+        vertical-align: center;
+    }
+
+    .imagebox4 {
+        grid-area: b1;
+        width: 100vw;
+        color: rgb(255, 255, 255);
+        overflow: hidden;
+    }
+
+    .imagebox4 img{
+        width: 100vw;
+    }
 }
 
-.textbox1 p {
-    padding: 2%;
-    margin: 2%;
-    vertical-align: center;
+.title3 {
+    grid-area: title3;
+    padding-top: 1vh;
+    margin-bottom: 1vh;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
-.imagebox1 {
-    grid-area: b;
+.podcast3 {
+    align-self: center;
+    grid-area: pod;
     width: 40vw;
-    color: rgb(255, 255, 255);
+    margin-left: 30vw;
+    margin-right: 30vw;
 }
 
-.imagebox1 img{
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-top: 10%;
-    margin-bottom: 10%;
-    width: 40%;
-    height: 60%;
-    border-radius: 10%;
+.source {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 2%;
+    float: left;
+}
+
+img {
+    border-radius: 2%;
 }
